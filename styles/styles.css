@@ -7,7 +7,12 @@
 body
 {
   min-height: 100vh;
-  background: #000000;;
+  background: #000000;
+  /* grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+   "header header" */
+  ;
 }
 .container
 {
@@ -57,25 +62,22 @@ body
 
 
 header {
-  display: inline;
-  flex-direction: row;
+  display: flex;
+  /* flex-direction: row; */
   color: white;
-  text-align: center;
+  align-items: center;
+  justify-content: space-between; 
+  /* grid-area: header; */
 }
-
+.company-name {
+  font-size: 50px; 
+  margin: 0px;
+}
 .logo {
-  width: 150px; /* Adjust the size as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 150px; 
+  height: auto; 
+  
 }
-
-/* header #main_icon {
-  height: 2.2em;
-  padding: 2px;
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-right: 2em;
-  border-radius: 10px;
-} */
 
 main {
   display: flex;
