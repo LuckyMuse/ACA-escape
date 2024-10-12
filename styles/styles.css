@@ -7,7 +7,7 @@
 body
 {
   min-height: 100vh;
-  background: #171d16;;
+  background: #000000;;
 }
 .container
 {
@@ -57,9 +57,9 @@ body
 
 
 header {
-  display: flex;
+  display: inline;
   flex-direction: row;
-  color: #ff0000;
+  color: white;
   text-align: center;
 }
 header #main_icon {
@@ -100,11 +100,12 @@ main {
 #type-container h2 {
   font-style: italic;
   font-size: 16;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(22, 67, 29);
   padding: 0.5em;
   margin-bottom: -0em;
   border-radius: 40px;
   box-shadow: 3px 5px 15px rgb(20, 15, 15);
+  color: white;
 }
 
 #search-container {
