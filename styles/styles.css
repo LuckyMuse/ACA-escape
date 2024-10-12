@@ -7,7 +7,7 @@
 body
 {
   min-height: 100vh;
-  background: #c5c3be;
+  background: #171d16;;
 }
 .container
 {
@@ -59,10 +59,11 @@ body
 header {
   display: flex;
   flex-direction: row;
+  color: #ff0000;
 }
 header #main_icon {
   height: 2.2em;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(26, 37, 16);
   padding: 2px;
   margin-top: 5px;
   margin-left: 5px;
@@ -96,19 +97,27 @@ main {
   background-repeat: no-repeat;
 }
 #type-container h2 {
+  font-style: italic;
+  font-size: 16;
   background-color: rgb(255, 255, 255);
-  padding: 0em;
+  padding: 0.5em;
   margin-bottom: -0em;
   border-radius: 2px;
   box-shadow: 3px 5px 15px rgb(20, 15, 15);
 }
 
 #search-container {
+  margin-top: 2.5em;
   padding-top: 5%;
   display: flex;
+  gap: 1em;
   justify-content: space-between;
-  flex-direction: column;
-  margin-bottom: 3em;
+  flex-direction: row;
+  margin-bottom: 1em;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px;
+
 }
 #search-container #city,
 #search-container #activity {
@@ -123,6 +132,10 @@ main {
 }
 #list-contatiner h2 {
   text-align: center;
+  color: white;
+  padding: 3em;
+  margin-bottom: 3px;
+  
 }
 #list-contatiner img {
   width: 10em;
