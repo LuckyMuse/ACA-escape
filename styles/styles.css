@@ -62,15 +62,20 @@ header {
   color: white;
   text-align: center;
 }
-header #main_icon {
+
+.logo {
+  width: 150px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* header #main_icon {
   height: 2.2em;
-  background-color: rgb(26, 37, 16);
   padding: 2px;
   margin-top: 5px;
   margin-left: 5px;
   margin-right: 2em;
-  border-radius: 50px;
-}
+  border-radius: 10px;
+} */
 
 main {
   display: flex;
