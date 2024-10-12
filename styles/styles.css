@@ -158,6 +158,7 @@ main {
   display: flex;
   flex-direction: row;
   margin: 5em;
+  color: white;
 }
 #list-contatiner .descr {
   margin-left: 3em;
