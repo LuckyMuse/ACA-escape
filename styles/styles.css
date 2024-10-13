@@ -1,4 +1,10 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Sixtyfour&display=swap');
+
 *
+
 {
   margin: 0;
   padding: 0;
@@ -72,10 +78,32 @@ header {
 .company-name {
   font-size: 50px; 
   margin: 0px;
+  margin-left: 440px;
+  /* font-family: "bungee hairline", sans-serif; */
+  /* font-weight: 200; */
 }
+.log-in{
+  background-color: #178942;
+  border-radius: 35px;
+  font-size: 16px;
+  margin-right: 60px;
+  padding: 0.55%;
+  color: white;
+}
+.sign{
+  background-color: #178942;
+  border-radius: 35px;
+  font-size: 16px;
+  padding: 0.5%;
+  margin-left: 380px;
+  color: white;
+}
+
 .logo {
   width: 150px; 
   height: auto; 
+  /* margin-right: 15px; */
+  /* border-radius: 50px; */
   
 }
 
@@ -103,11 +131,12 @@ main {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 35px;
 }
 #type-container h2 {
   font-style: italic;
   font-size: 16;
-  background-color: rgb(22, 67, 29);
+  background-color: #178942;
   padding: 0.5em;
   margin-bottom: -0em;
   border-radius: 40px;
@@ -158,9 +187,12 @@ main {
   display: flex;
   flex-direction: row;
   margin: 5em;
-  color: white;
 }
 #list-contatiner .descr {
   margin-left: 3em;
 }/*# sourceMappingURL=styles.css.map */
+
+.map {
+  border-radius: 35px;
+}
 
