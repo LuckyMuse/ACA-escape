@@ -78,10 +78,16 @@ header {
 .company-name {
   font-size: 50px; 
   margin: 0px;
-  margin-left: 440px;
-  /* font-family: "bungee hairline", sans-serif; */
+  margin-left: 350px;
+
+  font-family: "bungee hairline", sans-serif;
   /* font-weight: 200; */
 }
+
+.company-name::first-letter {
+  color: red;
+}
+
 .log-in{
   background-color: #178942;
   border-radius: 35px;
@@ -95,7 +101,7 @@ header {
   border-radius: 35px;
   font-size: 16px;
   padding: 0.5%;
-  margin-left: 380px;
+  margin-left: 300px;
   color: white;
 }
 
