@@ -301,3 +301,51 @@ main {
 #find-afro-events button:hover {
   background-color: #178942;
 }
+
+footer{
+  color: white;
+  font-size: 1em;
+  grid-area: footer;
+}
+footer {
+  justify-content: space-around;
+
+}
+.logo-footer ul {
+ font-size: 1.5em;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.logo-footer ul li a{
+  padding: 0.9em;
+
+
+}
+footer ul li a {
+
+  display: flex; 
+  font-size: 1em;
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+  
+}
+footer ul li a:hover{
+
+  /* margin: 0.05em; */
+  background-color: red;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+footer div{
+  margin-top: 1em;
+  font-size: 1em;
+  font-style: italic;
+}
+.copywrite{
+  text-align: center;
+  margin-top: 0.5em;
+  font-style: italic;
+}
