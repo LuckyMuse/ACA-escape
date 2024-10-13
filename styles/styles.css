@@ -225,6 +225,18 @@ main {
   border-radius: 35px;
 }
 
+#find-afro-events-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 3em;
+  margin: auto;
+  color: white;
+  gap: 1.5em;
+}
+
 .card-img-top {
   object-fit: cover;  
   height: 225px;  
@@ -232,30 +244,43 @@ main {
 #find-afro-events h1 {
   margin: 0;
   white-space: nowrap;
-  font-size: 25px;
+  font-size: 35px;
 }
 
 #find-afro-events {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: auto;
+  justify-content: center; 
+  width: auto;  
   padding: 3em;
   margin: auto;
   gap: 1em;
   color: white;
+  flex-direction: column;
+}
 
+#find-events-by-city{
+  display: flex;
+  padding: 2em;
+  gap: 1em;
+  margin-left: 558px;
+
+}
+
+#find-events-by-city #cityInput {
+  border-radius: 20px;
+  padding: 0.5em 1em;
+  text-align: center;
 }
 
 #find-afro-events button {
   padding: 0.5em 1em;
-  font-size: 1em;
+  font-size: 18px;
   cursor: pointer;
   color: black;
   border-radius: 20px;
   border: none;
   transition: 0.3s;
+
 }
 
 #find-afro-events button:hover {
