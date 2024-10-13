@@ -32,13 +32,14 @@
 </div> 
 
 <div id="find-afro-events">
-<h1>Find Afro Events by City</h1>
+  <div id="find-events-by-city">
+    <h1>Find Afro Events by City:</h1>
 
-<input type="text" id="cityInput" placeholder="Enter city name">
-<button id="searchButton">Search for Afro Events</button>
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button id="searchButton">Search for Afro Events</button>
+  </div>
 
-
-<div id="results"></div>
+  <div id="results"></div>
 </div>
 <script>
   const searchButton = document.getElementById('searchButton');
@@ -82,13 +83,22 @@
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = ''; // Clear previous results
 
+    let minLnt = Number.MAX_SAFE_INTEGER;
+    events.forEach(event => {
+      minLnt = Math.min(event.name.length, minLnt);
+    });
+
     events.forEach(event => {
       const eventDiv = document.createElement('div');
+      const clippedEventName = event.name.substring(0, minLnt);
+      eventDiv.id = 'event-${index}';
       eventDiv.innerHTML = `
-        <h3>${event.name}</h3>
+        <img src="${event.images[0].url}" alt="${event.name}" width="200">
+        <div id="event-info">
+        <h3>${clippedEventName}</h3>
         <p>Date: ${event.dates.start.localDate}</p>
         <a href="${event.url}" target="_blank">More Info</a>
-        <img src="${event.images[0].url}" alt="${event.name}" width="200">
+        </div>
         <hr>
       `;
       resultsDiv.appendChild(eventDiv);
