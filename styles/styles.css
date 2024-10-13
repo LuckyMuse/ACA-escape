@@ -302,6 +302,55 @@ main {
   background-color: #178942;
 }
 
+<<<<<<< HEAD
+footer{
+  color: white;
+  font-size: 1em;
+  grid-area: footer;
+}
+footer {
+  justify-content: space-around;
+
+}
+.logo-footer ul {
+ font-size: 1.5em;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.logo-footer ul li a{
+  padding: 0.9em;
+
+
+}
+footer ul li a {
+
+  display: flex; 
+  font-size: 1em;
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+  
+}
+footer ul li a:hover{
+
+  /* margin: 0.05em; */
+  background-color: red;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+footer div{
+  margin-top: 1em;
+  font-size: 1em;
+  font-style: italic;
+}
+.copywrite{
+  text-align: center;
+  margin-top: 0.5em;
+  font-style: italic;
+}
+=======
 #map {
     height: 350px;
     margin-left: 20%;
@@ -312,6 +361,11 @@ main {
  }
   
  #events {
+     font-size: 16px;
+     padding: 10px;
+ }
+>>>>>>> 5b7e95d0c41a91a65b52e6915076967b90d6be82
+
   display: flex;
   flex-wrap: wrap;  /* Ensures the items wrap to the next line */
   justify-content: space-between;  /* Distributes the events evenly */
