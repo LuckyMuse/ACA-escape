@@ -237,6 +237,10 @@ main {
   gap: 1.5em;
 }
 
+.card-img-top {
+  object-fit: cover;  
+  height: 225px;  
+}
 #find-afro-events h1 {
   margin: 0;
   white-space: nowrap;
@@ -281,36 +285,4 @@ main {
 
 #find-afro-events button:hover {
   background-color: #178942;
-}
-
-#results {
-  flex-direction: column;
-  display: none;
-  width: 100%;
-  margin-top: 1em;
-  text-align: center;
-}
-
-#results {
-  display: block;
-}
-
-#event-\$\{index\} {
-  display: flex;
-  justify-content: center;
-  padding: 3em;
-}
-
-#event-info {
-  justify-content: center;
-}
-
-#city-input {
-  padding: 0.5em 1em;
-  font-size: 1em;
-  cursor: pointer;
-  color: black;
-  border-radius: 20px;
-  border: none;
-  transition: 0.3s;
 }
