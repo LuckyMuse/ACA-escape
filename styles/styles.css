@@ -19,6 +19,7 @@ body
   grid-template-areas: 
    "header header" */
   ;
+
 }
 .container
 {
@@ -224,3 +225,35 @@ main {
   border-radius: 35px;
 }
 
+#find-afro-events h1 {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 25px;
+}
+
+#find-afro-events {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: auto;
+  padding: 3em;
+  margin: auto;
+  gap: 1em;
+  color: white;
+
+}
+
+#find-afro-events button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  color: black;
+  border-radius: 20px;
+  border: none;
+  transition: 0.3s;
+}
+
+#find-afro-events button:hover {
+  background-color: #178942;
+}
