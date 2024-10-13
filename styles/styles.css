@@ -225,12 +225,10 @@ main {
   border-radius: 35px;
 }
 
-<<<<<<< HEAD
 .card-img-top {
   object-fit: cover;  
   height: 225px;  
 }
-=======
 #find-afro-events h1 {
   margin: 0;
   white-space: nowrap;
@@ -263,4 +261,3 @@ main {
 #find-afro-events button:hover {
   background-color: #178942;
 }
->>>>>>> 9a9e906da192dcc8f85be11696c76fdfeb23df00
