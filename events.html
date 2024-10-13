@@ -10,6 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/styles.css">
     <script src="https://kit.fontawesome.com/7c2aa39bd5.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="assets/app.js"></script>
 </head>
 
 
@@ -41,6 +43,15 @@
 
   <div id="results"></div>
 </div>
+
+
+<p id="location">Fetching your location...</p>
+     <div id="map"></div>
+     <div id="events"></div>
+     <script src="script.js"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6qN570cNfqmTDTf9QPE8rhNgKOoMhPhE&async=defer"></script>
+     <script src="assets/app.js"></script>
+
 <script>
   const searchButton = document.getElementById('searchButton');
 
@@ -55,7 +66,7 @@
   });
 
   function searchAfroEvents(city) {
-    const apiKey = 'M9XikQZGe69Zth1vtg7m88V58i2csv3r'; // Replace with your Ticketmaster API key
+    const apiKey = 'M9XikQZGe69Zth1vtg7m88V58i2csv3r'; 
     const url = `https://app.ticketmaster.com/discovery/v2/events.json?keyword=afro&city=${city}&apikey=${apiKey}`;
 
     fetch(url)
@@ -81,7 +92,7 @@
 
   function displayResults(events) {
     const resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = ''; // Clear previous results
+    resultsDiv.innerHTML = ''; 
 
     let minLnt = Number.MAX_SAFE_INTEGER;
     events.forEach(event => {
@@ -104,19 +115,133 @@
       resultsDiv.appendChild(eventDiv);
     });
   }
+
+
+  // Function to show event list with details (name, date, time, venue, and ticket URL)
+function showEvents(json) {
+    var eventsDiv = document.getElementById("events");
+    eventsDiv.innerHTML = ""; // Clear previous results
+    if (json._embedded && json._embedded.events) {
+        for (var i = 0; i < json._embedded.events.length; i++) {
+            var event = json._embedded.events[i];
+            var name = event.name;
+            var date = event.dates.start.localDate || "No date available";
+            var time = event.dates.start.localTime || "No time available";
+            var venue = event._embedded.venues[0].name || "Venue not available";
+            var ticketUrl = event.url || "#";
+
+            eventsDiv.innerHTML += `
+                <div class="event">
+                    <h3>${name}</h3>
+                    <p><strong>Date:</strong> ${date}</p>
+                    <p><strong>Time:</strong> ${time}</p>
+                    <p><strong>Venue:</strong> ${venue}</p>
+                    <p><a href="${ticketUrl}" target="_blank">Get Tickets</a></p>
+                </div>
+            `;
+        }
+    } else {
+        eventsDiv.innerHTML = "<p>No AFRICAN CARRIBBEAN events found.</p>";
+    }
+}
+
+  // Function to get user location
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+// Function to display location
+function showPosition(position) {
+    var locationElement = document.getElementById("location");
+    locationElement.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+    // Ticketmaster call with the keyword 
+    $.ajax({
+        type: "GET",
+        url: "https://app.ticketmaster.com/discovery/v2/events.json",
+        data: {
+            apikey: "M9XikQZGe69Zth1vtg7m88V58i2csv3r", 
+            latlong: latlon,
+            keyword: "Afro", 
+            radius: 600,      
+        },
+        async: true,
+        dataType: "json",
+        success: function(json) {
+            console.log(json);
+            var eventsElement = document.getElementById("events");
+            eventsElement.innerHTML = json.page.totalElements + " events found.";
+            showEvents(json);
+            initMap(position, json);
+        },
+        error: function(xhr, status, err) {
+            console.log(err);
+        }
+    });
+}
+
+// Function to initialize and display Google 
+function initMap(position, json) {
+    var mapDiv = document.getElementById('map');
+    var map = new google.maps.Map(mapDiv, {
+        center: { lat: position.coords.latitude, lng: position.coords.longitude },
+        zoom: 10
+    });
+
+    
+    if (json._embedded && json._embedded.events) {
+        json._embedded.events.forEach(function(event) {
+            var eventLocation = {
+                lat: event._embedded.venues[0].location.latitude,
+                lng: event._embedded.venues[0].location.longitude
+            };
+            var marker = new google.maps.Marker({
+                position: eventLocation,
+                map: map,
+                title: event.name
+            });
+        });
+    }
+}
+
+
+function showError(error) {
+    var locationElement = document.getElementById("location");
+    switch (error.code) {
+        case error.PERMISSION_DENIED:
+            locationElement.innerHTML = "User denied the request for Geolocation.";
+            break;
+        case error.POSITION_UNAVAILABLE:
+            locationElement.innerHTML = "Location information is unavailable.";
+            break;
+        case error.TIMEOUT:
+            locationElement.innerHTML = "The request to get user location timed out.";
+            break;
+        case error.UNKNOWN_ERROR:
+            locationElement.innerHTML = "An unknown error occurred.";
+            break;
+    }
+}
+
+
+window.onload = getLocation;
+
+
 </script>
 
 
 
 
-<!--- Google Maps API Fetching Location-->
-<p id="location">Fetching your location...</p>
-     <div id="map"></div>
-     <div id="events"></div>
+
     
-     <script src="script.js"></script>
-     <script src="https://maps.googleapis.com/maps/api/js?key=googleapi&async=defer"></script>
+     
 </body>
 
-<script src="assets/app.js"></script>
+
 </html>

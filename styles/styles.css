@@ -302,6 +302,7 @@ main {
   background-color: #178942;
 }
 
+<<<<<<< HEAD
 footer{
   color: white;
   font-size: 1em;
@@ -349,3 +350,15 @@ footer div{
   margin-top: 0.5em;
   font-style: italic;
 }
+=======
+#map {
+    height: 400px;
+     width: 100%;
+     margin-bottom: 20px;
+ }
+  
+ #events {
+     font-size: 16px;
+     padding: 10px;
+ }
+>>>>>>> 5b7e95d0c41a91a65b52e6915076967b90d6be82
