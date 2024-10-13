@@ -270,7 +270,7 @@ const data = [{
         address: '295 Birchfield Rd, Handsworth, Birmingham B20 3BX',
         average_price: 15,
         web: 'https://titanicrestaurantbham.co.uk/',
-        img: './assets/img/birmingham/Titanic.jpg'
+        img: './assets/img/birmingham/Titantic.jpg'
     },
     {
         city: 'Birmingham',
