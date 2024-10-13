@@ -30,12 +30,13 @@
 
     function searchAfroEvents(city) {
       const apiKey = 'M9XikQZGe69Zth1vtg7m88V58i2csv3r'; // Replace with your Ticketmaster API key
-      const url = 'https://app.ticketmaster.com/discovery/v2/events.json?keyword=afro&city=${city}&apikey=${apiKey}';
+      const url = `https://app.ticketmaster.com/discovery/v2/events.json?keyword=afro&city=${city}&apikey=${apiKey}`;
 
       fetch(url)
         .then(response => {
           if (!response.ok) {
-            throw new Error('HTTP error! Status: ${response.status}');
+            throw new Error(`HTTP error! Status: 
+            ${response.status}`);
           }
           return response.json();
         })
