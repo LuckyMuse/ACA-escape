@@ -224,3 +224,7 @@ main {
   border-radius: 35px;
 }
 
+.card-img-top {
+  object-fit: cover;  
+  height: 225px;  
+}
