@@ -272,6 +272,18 @@ main {
   text-align: center;
 }
 
+#event-\$\{index\} {
+  display: flex;
+  justify-content: center;
+  padding: 3em;
+}
+
+#event-info {
+  margin: 20px;
+}
+
+
+
 #find-afro-events button {
   padding: 0.5em 1em;
   font-size: 18px;
