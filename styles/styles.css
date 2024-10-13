@@ -261,3 +261,14 @@ main {
 #find-afro-events button:hover {
   background-color: #178942;
 }
+
+#map {
+    height: 400px;
+     width: 100%;
+     margin-bottom: 20px;
+ }
+  
+ #events {
+     font-size: 16px;
+     padding: 10px;
+ }
