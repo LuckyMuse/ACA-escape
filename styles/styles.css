@@ -495,3 +495,12 @@ footer div{
 .website-btn:hover {
   background-color: darkred;
 }
+
+
+
+.container h3 {
+  font-weight: bold;
+  text-align: center;
+  color: red;
+}
+
