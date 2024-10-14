@@ -302,7 +302,7 @@ main {
   background-color: #178942;
 }
 
-<<<<<<< HEAD
+
 footer{
   color: white;
   font-size: 1em;
@@ -350,7 +350,7 @@ footer div{
   margin-top: 0.5em;
   font-style: italic;
 }
-=======
+
 #map {
     height: 350px;
     margin-left: 20%;
@@ -363,40 +363,88 @@ footer div{
  #events {
      font-size: 16px;
      padding: 10px;
+     display: flex;
+     flex-wrap: wrap;  
+     justify-content: space-between;  
+     
+     margin-left: 125px;
+     margin-right: 125px;
+     padding-bottom: 30px;
  }
->>>>>>> 5b7e95d0c41a91a65b52e6915076967b90d6be82
 
-  display: flex;
-  flex-wrap: wrap;  /* Ensures the items wrap to the next line */
-  justify-content: space-between;  /* Distributes the events evenly */
-  
-  margin-left: 125px;
-  margin-right: 125px;
-  padding-bottom: 30px;
-}
+
+ 
+
 
 .custom-card {
-  border: 1px solid grey;      /* Grey border */
-  background-color: black;     /* Black background */
-  color: white;                /* White text */
+  border: 1px solid grey;      
+  background-color: black;     
+  color: white;                
 }
 
 .custom-card .card-title {
-  color: red;                  /* Red card title */
+  color: red;                  
 }
 
 .custom-card .card-body {
-  color: white;                /* Ensure all text within the body is white */
+  color: white;                
 }
 
 .btn-success {
-  background-color: green; /* Green background */
-  color: white;            /* White text */
-  border: none;            /* Remove border */
-  width: 100%;             /* Full width button */
-  text-align: center;      /* Center the text */
+  background-color: green; 
+  color: white;            
+  border: none;            
+  width: 100%;             
+  text-align: center;      
 }
 
 .btn-success:hover {
-  background-color: darkgreen; /* Darker green on hover */
+  background-color: darkgreen; 
+}
+
+.btn-red {
+  background-color: red;       
+  color: white;                
+  border: none;                
+  font-size: 1.5rem;           
+  padding: 15px 30px;          
+  border-radius: 30px;      
+  box-shadow: 3px 5px 15px rgb(20, 15, 15);  
+}
+
+.btn-red:hover {
+  background-color: darkred;   /
+}
+
+
+.btn-mustard {
+  background-color: #e3b623;   
+  color: white;                             
+  font-size: 1.2rem;           
+  padding: 10px 20px;          
+  border-radius: 30px;         
+  text-align: center;
+  text-shadow: #000000;
+  box-shadow: 3px 5px 15px rgb(20, 15, 15);
+}
+
+.btn-mustard:hover {
+  background-color: #E1B946;   
+}
+
+.btn-custom{
+  background-color: #e3b623;   
+  color: white;                             
+  font-size: 1.2rem;           
+  padding: 10px 20px;          
+  border-radius: 30px;         
+  text-align: center;
+  text-shadow: #000000;
+  box-shadow: 3px 5px 15px rgb(20, 15, 15);
+
+}
+
+
+.btn-custom:hover {
+  background-color: #92741a;   
 }
