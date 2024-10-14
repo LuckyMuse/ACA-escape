@@ -82,7 +82,7 @@ function printList() {
                         <h4 class="place_name">${place.name}</h4>
                         <p class="address">${place.address}</p>
                         <p class="av_price">Average Price: £${place.average_price}</p>
-                        <a href="${place.web}">Website</a>
+                        <a href="${place.web}" class="website-btn">Go to Website</a>
                     </div>
                 </div>`;
                     }
