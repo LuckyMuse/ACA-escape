@@ -91,8 +91,7 @@ header {
 }
 
 .update{
-  /* background-color: #178942; */
-  background-color: red;
+  background-color: #178942;
   border-radius: 35px;
   font-size: 18px;
   margin-right: 60px;
@@ -100,8 +99,7 @@ header {
   color: white;
 }
 .sign{
-  /* background-color: #178942; */
-  background-color: red;
+  background-color: #178942;
   border-radius: 35px;
   font-size: 18px;
   padding: 0.55%;
@@ -170,28 +168,12 @@ main {
 #type-container h2 {
   font-style: italic;
   font-size: 16;
-  /* background-color: #178942; */
-  /* background-color: #0D6EFD; */
-  background-color: red;
+  background-color: #178942;
   padding: 0.5em;
   margin-bottom: -0em;
   border-radius: 40px;
   box-shadow: 3px 5px 15px rgb(20, 15, 15);
   color: white;
-}
-
-#type-container h1 {
-  font-style: italic;
-  font-size: 16;
-  background-color: #0D6EFD;
-  padding: 0.5em;
-  margin-bottom: -0em;
-  border-radius: 40px;
-  box-shadow: 3px 5px 15px rgb(20, 15, 15);
-  color: white;
-  text-decoration: none;
-
-  margin-top: 50px;
 }
 
 #search-container {
@@ -320,6 +302,7 @@ main {
   background-color: #178942;
 }
 
+
 footer{
   color: white;
   font-size: 1em;
@@ -352,7 +335,7 @@ footer ul li a {
 footer ul li a:hover{
 
   /* margin: 0.05em; */
-  background-color: darkgray;
+  background-color: red;
   border-radius: 50%;
   text-decoration: none;
 }
@@ -367,6 +350,7 @@ footer div{
   margin-top: 0.5em;
   font-style: italic;
 }
+
 #map {
     height: 350px;
     margin-left: 20%;
@@ -379,16 +363,14 @@ footer div{
  #events {
      font-size: 16px;
      padding: 10px;
+     display: flex;
+     flex-wrap: wrap;  
+     justify-content: space-between;  
+     
+     margin-left: 125px;
+     margin-right: 125px;
+     padding-bottom: 30px;
  }
-
-  display: flex;
-  flex-wrap: wrap;  /* Ensures the items wrap to the next line */
-  justify-content: space-between;  /* Distributes the events evenly */
-  
-  margin-left: 125px;
-  margin-right: 125px;
-  padding-bottom: 30px;
-}
 
 
  
@@ -417,5 +399,52 @@ footer div{
 }
 
 .btn-success:hover {
-  background-color: darkgreen; /* Darker green on hover */
+  background-color: darkgreen; 
+}
+
+.btn-red {
+  background-color: red;       
+  color: white;                
+  border: none;                
+  font-size: 1.5rem;           
+  padding: 15px 30px;          
+  border-radius: 30px;      
+  box-shadow: 3px 5px 15px rgb(20, 15, 15);  
+}
+
+.btn-red:hover {
+  background-color: darkred;   /
+}
+
+
+.btn-mustard {
+  background-color: #e3b623;   
+  color: white;                             
+  font-size: 1.2rem;           
+  padding: 10px 20px;          
+  border-radius: 30px;         
+  text-align: center;
+  text-shadow: #000000;
+  box-shadow: 3px 5px 15px rgb(20, 15, 15);
+}
+
+.btn-mustard:hover {
+  background-color: #E1B946;   
+}
+
+.btn-custom{
+  background-color: #e3b623;   
+  color: white;                             
+  font-size: 1.2rem;           
+  padding: 10px 20px;          
+  border-radius: 30px;         
+  text-align: center;
+  text-shadow: #000000;
+  box-shadow: 3px 5px 15px rgb(20, 15, 15);
+
+}
+
+
+.btn-custom:hover {
+  background-color: #92741a;   
 }
