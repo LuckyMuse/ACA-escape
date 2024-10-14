@@ -259,13 +259,14 @@ main {
   gap: 1em;
   color: white;
   flex-direction: column;
+  margin-right: px;
 }
 
 #find-events-by-city{
   display: flex;
   padding: 2em;
   gap: 1em;
-  margin-left: 558px;
+  margin-left: 224px;
 
 }
 
