@@ -91,7 +91,8 @@ header {
 }
 
 .update{
-  background-color: #178942;
+  /* background-color: #178942; */
+  background-color: red;
   border-radius: 35px;
   font-size: 18px;
   margin-right: 60px;
@@ -99,7 +100,8 @@ header {
   color: white;
 }
 .sign{
-  background-color: #178942;
+  /* background-color: #178942; */
+  background-color: red;
   border-radius: 35px;
   font-size: 18px;
   padding: 0.55%;
@@ -168,12 +170,28 @@ main {
 #type-container h2 {
   font-style: italic;
   font-size: 16;
-  background-color: #178942;
+  /* background-color: #178942; */
+  /* background-color: #0D6EFD; */
+  background-color: red;
   padding: 0.5em;
   margin-bottom: -0em;
   border-radius: 40px;
   box-shadow: 3px 5px 15px rgb(20, 15, 15);
   color: white;
+}
+
+#type-container h1 {
+  font-style: italic;
+  font-size: 16;
+  background-color: #0D6EFD;
+  padding: 0.5em;
+  margin-bottom: -0em;
+  border-radius: 40px;
+  box-shadow: 3px 5px 15px rgb(20, 15, 15);
+  color: white;
+  text-decoration: none;
+
+  margin-top: 50px;
 }
 
 #search-container {
@@ -302,7 +320,6 @@ main {
   background-color: #178942;
 }
 
-<<<<<<< HEAD
 footer{
   color: white;
   font-size: 1em;
@@ -335,7 +352,7 @@ footer ul li a {
 footer ul li a:hover{
 
   /* margin: 0.05em; */
-  background-color: red;
+  background-color: darkgray;
   border-radius: 50%;
   text-decoration: none;
 }
@@ -350,7 +367,6 @@ footer div{
   margin-top: 0.5em;
   font-style: italic;
 }
-=======
 #map {
     height: 350px;
     margin-left: 20%;
@@ -364,6 +380,7 @@ footer div{
      font-size: 16px;
      padding: 10px;
  }
+<<<<<<< Updated upstream
 >>>>>>> 5b7e95d0c41a91a65b52e6915076967b90d6be82
 
   display: flex;
@@ -400,3 +417,5 @@ footer div{
 .btn-success:hover {
   background-color: darkgreen; /* Darker green on hover */
 }
+=======
+>>>>>>> Stashed changes
