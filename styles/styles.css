@@ -335,15 +335,15 @@ footer ul li a {
 footer ul li a:hover{
 
   /* margin: 0.05em; */
-  background-color: red;
-  border-radius: 50%;
+  background-color: darkgray ;
+  border-radius: 30px;
   text-decoration: none;
 }
 
 footer div{
   margin-top: 1em;
   font-size: 1em;
-  font-style: italic;
+  
 }
 .copywrite{
   text-align: center;
