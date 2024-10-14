@@ -105,6 +105,8 @@ header {
   padding: 0.55%;
   margin-left: 300px;
   color: white;
+  white-space: nowrap;
+  display: inline;
 }
 
 .logo {
